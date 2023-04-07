@@ -27,7 +27,7 @@
                             </span>
                         </div>
                         <div class="">
-                            <button *ngIf="isGranted([PermissionCoreConst.CoreTinTuc_ThemMoi])" pButton pRipple label="Thêm mới" icon="pi pi-plus" class="p-button-success mr-2"
+                            <button pButton pRipple label="Thêm mới" icon="pi pi-plus" class="p-button-success mr-2"
                                 (click)="create()"></button>
                         </div> 
                     </div>
@@ -35,10 +35,10 @@
                 <ng-template pTemplate="header">
                     <tr>
                         <th style="max-width: 6rem; min-width: 6rem;" pFrozenColumn alignFrozen="left">#ID</th>
-                        <th style="max-width: 5rem; min-width: 5rem;" pFrozenColumn alignFrozen="left" class="b-border-frozen-left">Ảnh</th>
-                        <th style="max-width: 25rem; min-width: 15rem;"> Tiêu đề</th>
-                        <th  style="max-width: 8rem; min-width: 8rem;">Loại bài viết</th>
-                        <th style="min-width: 25rem;">Nội dung </th>
+                        <th style="max-width: 5rem; min-width: 5rem;" pFrozenColumn alignFrozen="left">Code</th>
+                        <th style="max-width: 25rem; min-width: 15rem;"> Name</th>
+                        <th  style="max-width: 10rem; min-width: 10rem;">Product Type</th>
+                        <th style="min-width: 25rem;">Description</th>
                         <th style="max-width: 7rem; min-width: 7rem;" pFrozenColumn alignFrozen="right" [frozen]="true" class="b-border-frozen-right">Trạng thái </th>
                         <th style="max-width: 3rem; min-width: 3rem; justify-content: center;" pFrozenColumn alignFrozen="right" [frozen]="true">
                     </tr>
@@ -48,7 +48,6 @@
                         <td style="max-width: 6rem; min-width:6rem;" pFrozenColumn alignFrozen="left"> {{ row.code }} </td>
                         <td style="max-width: 5rem; min-width: 5rem; " pFrozenColumn alignFrozen="left" class="b-border-frozen-left"> 
                             <p-image *ngIf="row.mainImg && !row.isVideo" src="{{baseUrl}}/{{ row.mainImg }}" alt="Image" width="50"></p-image>
-                            <p-image *ngIf="row.mainImg && row.isVideo == true"  src="assets/demo/images/template/videoTemplate.png" alt="Image" width="50"></p-image>
                         </td>
                         <td style="max-width: 25rem; min-width: 15rem;"> {{ row.title }} </td>
                         <td style="max-width: 8rem; min-width: 8rem;"> {{ MediaConst.getNewsType(row.type) }} </td>
@@ -70,7 +69,7 @@
                                 </p-menu>
                             </div>
                         </td>
-                        <!-- <td style="width: 5rem; ">
+                        <td style="width: 5rem; ">
                             
                             <div class="flex">
                                 <div class="dropdown">
@@ -82,7 +81,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </td> -->
+                        </td>
                     </tr>
                 </ng-template>
 

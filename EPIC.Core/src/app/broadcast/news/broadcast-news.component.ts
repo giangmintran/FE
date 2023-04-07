@@ -180,7 +180,6 @@ export class BroadcastNewsComponent extends CrudComponentBase implements OnInit 
     }, (err) => {
       this.isLoading = false;
       console.log('Error-------', err);
-      
     });
   }
 
